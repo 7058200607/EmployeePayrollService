@@ -21,3 +21,14 @@ select *from emp_payroll2 where  start_date between CAST('2019-03-01' as  date)a
 alter table emp_payroll2 add gender varchar(200);
 update emp_payroll2 set gender ='F'where empname='komal' or empname='mrunal'or empname='punam'or empname='aayushi';
 update emp_payroll2 set gender='M'where empname='sarthak'or empname='saurav';
+---uC7
+select SUM(salary) as TotalSalary from emp_payroll2 where gender='F'GROUP BY gender;
+select SUM(salary) as TotalSalary from emp_payroll2 where gender ='M'GROUP BY gender;
+select AVG(salary) as AvarageSalary from emp_payroll2 where gender ='F'GROUP BY gender;
+select AVG(salary) as AvarageSalary from emp_payroll2 where gender ='M'GROUP BY gender;
+select MIN(salary) as MinimumSalary from emp_payroll2 where gender ='F'GROUP BY gender;
+select MIN(salary) as MinimumSalary from emp_payroll2 where gender ='M'GROUP BY gender;
+select MAX(salary) as MaximumSalary from emp_payroll2 where gender ='F'GROUP BY gender;
+select MAX(salary) as MaximumSalary from emp_payroll2 where gender ='M'GROUP BY gender;
+select COUNT(salary) as CountSalary from emp_payroll2 where gender ='F'GROUP BY gender;
+select COUNT(salary) as AvarageSalary from emp_payroll2 where gender ='M'GROUP BY gender;
